@@ -62,7 +62,38 @@ void TLinkedList_print(TLinkedList* lista){
         }
     }
 }
+
 //TODO: Implementar esta função
 bool TLinkedList_try_to_delete(TLinkedList* lista, int info){
+    if(lista == NULL || lista->inicio == NULL) return false;
+    
+    if(lista->inicio != NULL){
+        if(lista->inicio->info == info){
+                TNo* x = lista->inicio;
+                lista->inicio = x->prox;
+                free(x);
+                return true;
+        }
+    }
+    else{
+        TNo* y = lista->inicio;
+        TNo* x = x->prox;
 
-}
+        while(x != NULL){
+            if(x->info == info){
+                break;
+            }
+            y = x;
+            x = x->prox;
+            }
+
+            if(x != NULL){
+                y->prox = x->prox;
+                free(x);
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    }
