@@ -79,6 +79,7 @@ bool TLinkedList_try_to_delete(TLinkedList* lista, int info){
         TNo* y = lista->inicio;
         TNo* x = x->prox;
 
+<<<<<<< HEAD
         while(x != NULL){
             if(x->info == info){
                 break;
@@ -97,3 +98,10 @@ bool TLinkedList_try_to_delete(TLinkedList* lista, int info){
             }
         }
     }
+=======
+}
+//TODO: Implementar esta função 
+void TLinkedList_free(TLinkedList* lista){
+    
+}
+>>>>>>> 266d0267734897ade94e035d95a2f9722d700286
